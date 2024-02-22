@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { TodoWrapper } from "./components/TodoWrapper";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">Eisenhower Matrix : To Do List</h1>
+      <div className="QuadrantWrapper">
+        <div className="TodoWrapper">
+          <div className="line-container">
+            <h6 className="hower">DO IT FIRST</h6>
+            <small className="smaller">Do these things as soon as possible</small>
+          </div>
+          <TodoWrapper />
+        </div>
+        <div className="TodoWrapper">
+          <div className="line-container">
+            <h6 className="hower">SCHEDULE IT</h6>
+            <small className="smaller">Schedule a time to do these things</small>
+          </div>
+          <TodoWrapper />
+        </div>
+        <div className="TodoWrapper">
+          <div className="line-container">
+            <h6 className="hower">DELEGATE IT</h6>
+            <small className="smaller">Find someone who can do these for you</small>
+          </div>
+          <TodoWrapper />
+        </div>
+        <div className="TodoWrapper">
+          <div className="line-container">
+            <h6 className="hower">DELETE IT</h6>
+            <small className="smaller">Just avoid doing these things</small>
+          </div>
+          <TodoWrapper />
+        </div>
+      </div>
     </div>
   );
 }
